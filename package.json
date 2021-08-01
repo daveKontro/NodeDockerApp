@@ -1,0 +1,28 @@
+{
+  "name": "node-docker-app",
+  "version": "1.0.0",
+  "description": "containerize a node.js app via docker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.17.1",
+    "morgan": "1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daveKontro/NodeDockerApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/daveKontro/NodeDockerApp/issues"
+  },
+  "homepage": "https://github.com/daveKontro/NodeDockerApp#readme"
+}
