@@ -1,6 +1,6 @@
 # NodeDockerApp
 - simple node.js app containerized via docker for deployment testing
-- use for testing purposes; not recommend for production deployment
+- use for testing purposes; not recommended for production deployment
 
 ## run app directly
 - navigate to app root dir
