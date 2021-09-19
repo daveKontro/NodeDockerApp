@@ -1,6 +1,6 @@
 {
   "name": "node-docker-app",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "containerize a node.js app via docker",
   "main": "server.js",
   "scripts": {
