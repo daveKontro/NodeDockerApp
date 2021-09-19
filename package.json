@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build": "docker build -t node-docker-app .",
+    "container": "docker run -p 80:3000 -d node-docker-app"
   },
   "keywords": [],
   "author": "",

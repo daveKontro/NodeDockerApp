@@ -16,8 +16,28 @@
 - see image `docker images`
 - start app in container `docker run -p 80:3000 -d <image id>`
 - see container `docker ps`
-- start shell in container `docker exec -it <container id> /bin/ash`
+- start shell in container `docker exec -it <container id> /bin/bash`
 - app running on `http://localhost/`
   - open `access.log` in container to view http logging
 - exit container shell `exit`
 - stop container `docker stop <container id>`
+
+## debug container in vscode (v1.59.1)
+- install nodemon globally `npm install -g nodemon`
+- install docker extension for vs code
+- expose default node.js debugging port 9229 (see docker-compose.yml)
+  - DO NOT expose the debugging port in production
+  - [node.js debugging guide](https://nodejs.org/en/docs/guides/debugging-getting-started/)
+- add inspection switch to npm script (see docker-compose.yml)
+- create vscode launch.json
+  - in debugger pane click add configuration, docker: attach to node
+  - this generates a launch.json, edit appropriately
+- run docker compose `docker-compose up`
+- press play in debugger pane
+- to stop disconnect debugger then stop docker-compose with `crtl-c`
+
+## docker-compose commands
+- run `docker-compose up`
+- run in background `docker-compose up -d`
+- rebuild and run `docker-compose up --build`
+- remove containers and network `docker-compose down`
