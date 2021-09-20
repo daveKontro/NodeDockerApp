@@ -31,7 +31,25 @@
 - add inspection switch to npm script (see docker-compose.yml)
 - create vscode launch.json
   - in debugger pane click add configuration, docker: attach to node
-  - this generates a launch.json, edit appropriately
+    - this generates a launch.json, edit appropriately
+      ```
+      {
+        "version": "0.2.0",
+        "configurations": [
+          {
+            "name": "Docker: Attach to Node",
+            "type": "node",
+            "request": "attach",
+            "restart": true,
+            "port": 9229,
+            "address": "localhost",
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "/var/www/app",
+            "protocol": "inspector"
+          }
+        ]
+      }
+      ```
 - run docker compose `docker-compose up`
 - press play in debugger pane
 - to stop disconnect debugger then stop docker-compose with `crtl-c`
